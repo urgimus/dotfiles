@@ -1,0 +1,90 @@
+# .conkyrc - Edited from various examples compiled from the Web
+
+# --- Window Layout & Options --- #
+own_window yes
+own_window_argb_visual yes
+# own_window_type override
+# own_window_type root
+# own_window_type normal
+own_window_type_desktop
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+ 
+background yes
+double_buffer yes
+use_spacer right
+use_xft yes
+alignment top_right
+# alignment top_left
+# alignment bottom_left
+# alignment bottom_right
+gap_x 25
+gap_y 15
+
+# --- Colours, Sizes, Fonts & Margins --- #
+update_interval 1.0
+maximum_width 350
+stippled_borders 3 
+border_margin 9
+border_width 10
+default_color FFFFFF
+color1 FFFFFF
+default_shade_color black
+default_outline_color blue
+
+# Internet : ${if_existing /proc/net/route wlan0} $alignr WIFI
+# Up :$alignr ${upspeedf wlan0}/${totalup wlan0}
+# Down: $alignr ${downspeedf wlan0}/${totaldown wlan0}
+# ${else}${if_existing /proc/net/route eth0} $alignr 4G
+# Up : $alignr ${upspeedf eth0}/${totalup eth0}
+# Down : $alignr ${downspeedf eth0}/${totaldown eth0}
+# ${else}${if_existing /proc/net/route ppp0} $alignr 3G+
+# Up : $alignr ${upspeedf ppp0}/${totalup ppp0}
+# Down : $alignr ${downspeedf ppp0}/${totaldown ppp0}
+# ${else}Not connected${endif}${endif}${endif}
+
+# --- Text --- #
+draw_outline no
+draw_borders no
+draw_shades no
+draw_graph_borders no
+# font verdana:size=10:weight=bold
+font Droid Sans:size=9:weight=bold
+# font DejaVu Sans Mono:size=9:weight=bold
+# font Liberation Sans:size=10:weight=bold
+# font Consolas:size=10:weight=bold
+# font Anonymous Pro:size=11:weight=bold
+uppercase no
+override_utf8_locale yes
+
+TEXT
+
+$color1 Uptime  $color ${alignr} $uptime
+$color1 CPU1    ${alignr} $color ${cpu cpu0}%
+$color1 CPU2    ${alignr} $color ${cpu cpu1}%
+$color1 Temp    ${alignr} $color ${hwmon temp 1}°C
+$color1 Battary ${alignr} $color ${battery_percent BAT0} %
+
+$color1 Root $color $alignr ${fs_free /}
+$color1 Home $color $alignr ${fs_free /home}
+$color1 Ram  $color $alignr ${mem}
+$color1 Swap $color $alignr ${swap}
+
+$color1 ${top_mem name 1} $color${alignr} ${top mem 1} %
+$color1 ${top_mem name 2} $color${alignr} ${top mem 2} %
+$color1 ${top_mem name 3} $color${alignr} ${top mem 3} %
+$color1 ${top_mem name 4} $color${alignr} ${top mem 4} %
+$color1 ${top_mem name 5} $color${alignr} ${top mem 5} %
+${if_existing /sys/class/net/wlan0/operstate up}
+$color1 ${wireless_essid wlan0} $color ${alignr} ${wireless_link_qual_perc wlan0}%
+$color1 wlan0 $color $alignr ${addr wlan0}
+$color1 Down $color $alignr ${downspeed wlan0}/${totaldown wlan0}
+$color1 Up $color $alignr ${upspeed wlan0}/${totalup wlan0}
+${else}
+${if_existing /sys/class/net/eth0/operstate up} 
+$color1 eth0 $color $alignr ${addr eth0}
+$color1 Down $color $alignr ${downspeed eth0}/${totaldown wlan0}
+$color1 Up $color $alignr ${upspeed eth0}/${totalup wlan0}
+${else}
+${endif}
+${endif}

@@ -1,0 +1,25 @@
+# -----------------------------------------------------------------------------#
+# file:                ~/.mpd/config
+# author:              urgimus
+# last updated:        06/07/2010  
+# -----------------------------------------------------------------------------#
+
+music_directory	       "/home/urgimus/music" 
+playlist_directory     "/home/urgimus/.mpd/playlists"
+db_file                "/home/urgimus/.mpd/mpd.db"
+log_file               "/home/urgimus/.mpd/mpd.log"
+# error_file             "/home/urgimus/.mpd/mpd.error"
+pid_file               "/home/urgimus/.mpd/mpd.pid"
+state_file             "/home/urgimus/.mpd/mpdstate"
+
+user                   "urgimus"
+
+audio_output {
+	type	           "alsa"
+	name	           "My MPD Alsa Output"
+}
+
+filesystem_charset     "UTF-8"
+id3v1_encoding         "UTF-8"
+
+metadata_to_use        "artist,album,title,track,name,genre,date,composer,performer,disc"

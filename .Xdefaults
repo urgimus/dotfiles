@@ -1,0 +1,30 @@
+! ---------------------------------------------------------------------------- #
+!
+! ~/.Xdefaults
+! Last updated: 24.06.2011
+!
+! ---------------------------------------------------------------------------- #
+!Перечитать файл и применить настройки
+!(при наличии ошибок выведет отчёт):
+xrdb -load ~/.Xdefaults
+
+!Подключение файла настроек для URxvt
+!(расположен в $HOME)
+#include ".urxvtrc"
+
+!Подключение файла настроек для Xterm
+!(расположен в $HOME)
+#include ".xtermrc"
+
+#
+Xcursor*theme :                      Vanilla-DMZ
+Xcursor*size :                       16
+#
+Xft.dpi: 96
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
+Xft.autohint: 0
+!

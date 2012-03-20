@@ -1,0 +1,140 @@
+! ---------------------------------------------------------------------------- #
+!
+! ~/.urxvtrc
+! Last updated: 24.06.2011
+!
+! ---------------------------------------------------------------------------- #
+!
+! === ВИЗУАЛЬНЫЕ НАСТРОЙКИ ===
+! Настройки цветовой схемы
+!#include "/home/urgimus/.color_schemes/b52"
+!#include "/home/urgimus/.color_schemes/c00kiez"
+!#include "/home/urgimus/.color_schemes/CalcAndCoffee"
+!#include "/home/urgimus/.color_schemes/Collection"
+!#include "/home/urgimus/.color_schemes/console_c00kiez"
+!#include "/home/urgimus/.color_schemes/console_fflarex"
+!#include "/home/urgimus/.color_schemes/console_phraktured"
+!#include "/home/urgimus/.color_schemes/Daisuke2"
+!#include "/home/urgimus/.color_schemes/Digerati"
+!#include "/home/urgimus/.color_schemes/drkwolf"
+!#include "/home/urgimus/.color_schemes/ganja"
+!#include "/home/urgimus/.color_schemes/jousi"
+!#include "/home/urgimus/.color_schemes/jstandler"
+!#include "/home/urgimus/.color_schemes/librec00kiez"
+!#include "/home/urgimus/.color_schemes/Longbow"
+!#include "/home/urgimus/.color_schemes/mason.larobina"
+!#include "/home/urgimus/.color_schemes/mattikus"
+!#include "/home/urgimus/.color_schemes/mmso2"
+!#include "/home/urgimus/.color_schemes/phraktured"
+!#include "/home/urgimus/.color_schemes/puzzled"
+#include "/home/urgimus/.color_schemes/Rasi"
+!#include "/home/urgimus/.color_schemes/Reasons"
+!#include "/home/urgimus/.color_schemes/Rezza"
+!#include "/home/urgimus/.color_schemes/sicpsnake"
+!#include "/home/urgimus/.color_schemes/solarized_dark"
+!#include "/home/urgimus/.color_schemes/solarized_light"
+!#include "/home/urgimus/.color_schemes/splittercode"
+!#include "/home/urgimus/.color_schemes/Square"
+!#include "/home/urgimus/.color_schemes/SuperTrain"
+!#include "/home/urgimus/.color_schemes/Tango"
+!#include "/home/urgimus/.color_schemes/Tangoesque"
+!#include "/home/urgimus/.color_schemes/Taters"
+!#include "/home/urgimus/.color_schemes/Thayer"
+!#include "/home/urgimus/.color_schemes/trapd00r"
+!#include "/home/urgimus/.color_schemes/tvale"
+!#include "/home/urgimus/.color_schemes/white"
+!#include "/home/urgimus/.color_schemes/whordijk"
+
+! Будет ли курсор мигать
+URxvt.cursorBlink:      true
+! Цвет курсора
+URxvt.cursorColor:      #7F7F7F
+! Цвет текста, находящегося под курсором
+URxvt.cursorColor2:     red
+
+! Псевдопрозрачность - в кач-ве фона
+! поставить обои рабочего стола
+! URxvt*transparent:     true
+! Яркость прозрачного фона (-100 .. 100)
+! URxvt*shading:         40
+! Та же псевдопрозрачность, без настройки яркости
+! URxvt.inheritPixmap:     true
+! URxvt*tintColor:       blue
+! Иконка окна терминала
+URxvt*iconFile: /home/urgimus/.icons/Faenza-Blue-Dark2/apps/22/Terminal.png
+
+! Настройки шрифтов
+URxvt*font: xft:Monospace:size=10:style=regular:antialias=True:hinting=True
+URxvt*boldFont: xft:Monospace:size=10:style=bold:antialias=True:hinting=True
+! URxvt*letterSpace: -2
+
+! Цвета в man-страницах
+URxvt.colorMode:         on
+URxvt.boldColors:        on
+URxvt.dynamicColors:     on
+URxvt.colorULMode:       on
+URxvt.underLine:         off
+URxvt.colorBDMode:       on
+URxvt.colorBD:           #585653
+
+! Скроллинг + скроллбар
+URxvt*scrollBar:        false
+URxvt*scrollBar_right:  true
+URxvt*scrollstyle:      rxvt
+
+! Отображать символ табуляции как один широкий символ
+! (иначе - как перемещения курсора)
+URxvt.pastableTabs:     true
+
+
+!=== НАСТРОЙКИ ОБРАБОТКИ ССЫЛОК ===
+! Внешняя программа для открытия ссылок
+URxvt.urlLauncher:      firefox
+! Кнопка мыши, которая открывает ссылку
+URxvt.matcher.button:   1
+! Горячие клавиши для выделения ссылок (Alt+U),
+! после выделения ссылка открывается по Enter
+URxvt.keysym.M-u:       perl:url-select:select_next
+! Выделять ссылки голубым цветом
+URxvt.colorUL:          #1E90FF
+! Подчеркивать ссылки
+URxvt.underlineURLs:    true
+URxvt.underlineColor:   red
+
+
+!=== НАСТРОЙКИ ФУНКЦИОНАЛА ===
+! Сколько строк хранить в памяти
+URxvt*saveLines:        5000
+! Настройки табов
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 2
+URxvt.tabbed.tab-bg: 8
+URxvt.tabbed.autohide:  yes
+URxvt.tabbed.new-button:  no
+URxvt.tabbed.title: no
+! Оболочка
+URxvt.geometry:         80x24
+URxvt.loginShell:       false
+URxvt.meta:             ignore
+URxvt.utmpInhibit:      true
+
+!=== НАСТРОЙКИ РАСШИРЕНИЙ ===
+! Путь для поиска пользовательских расширений
+! URxvt.perl-lib:         /home/urgimus/.config/urxvt/perl/
+! Загружаемые по умолчанию расширения
+! Основные; расширенные табы (без кнопки NEW, можно устанавливать
+! заголовок окна: https://github.com/stepb/urxvt-tabbedex);
+! регэкспы для выделения ссылок в тексте; выбор ссылок горячими
+! клавишами); копирование в буфер обмена
+URxvt.perl-ext-common:  default,tabbedex,matcher,url-select
+
+!Горячие клавиши rxvt
+!
+!После применения всех указанных выше настроек, rxvt будет реагировать на следующие сочетания клавишей:
+!
+!    Shift+Down (стрелка вниз) – создать новую вкладку (таб);
+!    Shift+Up (стрелка вверх) – задать имя вкладке (Esc – отмена);
+!    Shift+Left/Right (стрелки влево/вправо) – переключение между вкладками (можно мышью кликать на нужную вкладку);
+!    Ctrl+Left/Right – перемещение текущей вкладки влево/вправо;
+!    Ctrl+D – закроет вкладку (если командная строка пустая – защита от случайного нажатия);
