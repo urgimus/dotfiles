@@ -15,8 +15,8 @@ state_file             "/home/urgimus/.mpd/mpdstate"
 user                   "urgimus"
 
 audio_output {
-	type	           "alsa"
-	name	           "My MPD Alsa Output"
+	type	       "alsa"
+	name	       "My MPD Alsa Output"
 }
 
 filesystem_charset     "UTF-8"

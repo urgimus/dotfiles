@@ -5,13 +5,13 @@
 !
 ! X F T S E T T I N G S
 !
-Xft.dpi:       96
+Xft.dpi: 96
 Xft.antialias: 1
-Xft.hinting:   1
+Xft.hinting: 1
 Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
-Xft.rgba:      rgb
-Xft.autohint:  0
+Xft.rgba: rgb
+Xft.autohint: 0
 !
 xrdb -load ~/.Xresources
 #include ".xtermrc"
