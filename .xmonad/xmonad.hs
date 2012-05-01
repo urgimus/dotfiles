@@ -132,8 +132,8 @@ myKeys = [("M-<Return>", spawn  myTerminal                     )
           myMail       =  myTerminal ++ " -e mutt"
           myDmenu      = "dmenu_run -fn '" ++ myFont ++ "' -nb '" ++ colorBG ++ "' -nf '" ++ colorFG ++ "' -sb '" ++ colorFG2 ++ "' -sf '" ++ colorBG ++ "'"
           myLock       = "xscreensaver-command -l"
-          myShot       = "scrot -c -d -m '%d-%m-%Y_%H%M%S.png' -e 'mv $f /home/urgimus/Pictures/'"
-          myWallpapers = "feh -r -F -V -d -Z /home/urgimus/Pictures/Wallpapers/"
+          myShot       = "scrot -c -d -m '%d-%m-%Y_%H%M%S.png' -e 'mv $f /home/urgimus/images/'"
+          myWallpapers = "feh -r -F -V -d -Z /home/urgimus/images/wallpapers/"
           myRestart    = "for pid in `pgrep conky`; do kill -9 $pid; done && " ++
                          "for pid in `pgrep dzen2`; do kill -9 $pid; done && " ++
                          "xmonad --recompile && xmonad --restart "

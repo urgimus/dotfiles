@@ -23,7 +23,8 @@ gap_y 15
 
 # --- Colours, Sizes, Fonts & Margins --- #
 update_interval 1.0
-maximum_width 350
+maximum_width 250
+# minimum_size 250
 stippled_borders 3 
 border_margin 9
 border_width 10
@@ -39,13 +40,13 @@ draw_outline no
 draw_borders no
 draw_shades no
 draw_graph_borders no
-# font verdana:size=8:weight=bold
-font Droid Sans:size=9:weight=bold
+
+# font Droid Sans:size=9:weight=bold
 # font Bitstream Vera Sans Mono:size=9:weight=bold
 # font DejaVu Sans Mono:size=9:weight=bold
 # font Liberation Sans:size=10:weight=bold
 # font Consolas:size=10:weight=bold
-# font Anonymous Pro:size=11:weight=bold
+font PT Mono:size=9:weight=bold
 uppercase no
 override_utf8_locale yes
 
@@ -62,11 +63,11 @@ $color Home $color1 $alignr ${fs_free /home}
 $color Ram  $color1 $alignr ${mem}
 $color Swap $color1 $alignr ${swap}
 
-$color ${top_mem name 1} $color1${alignr} ${top mem 1} %
-$color ${top_mem name 2} $color1${alignr} ${top mem 2} %
-$color ${top_mem name 3} $color1${alignr} ${top mem 3} %
-$color ${top_mem name 4} $color1${alignr} ${top mem 4} %
-$color ${top_mem name 5} $color1${alignr} ${top mem 5} %
+$color ${top_mem name 1} $color1 ${alignr} ${top mem 1} %
+$color ${top_mem name 2} $color1 ${alignr} ${top mem 2} %
+$color ${top_mem name 3} $color1 ${alignr} ${top mem 3} %
+$color ${top_mem name 4} $color1 ${alignr} ${top mem 4} %
+$color ${top_mem name 5} $color1 ${alignr} ${top mem 5} %
 
 $color Internet ${if_existing /proc/net/route eth0}
 $color eth0  $alignr $color1 ${addr eth0}
